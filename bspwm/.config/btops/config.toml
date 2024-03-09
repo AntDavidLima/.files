@@ -1,0 +1,59 @@
+remove-empty = true
+remove-focused = false
+
+renamers = ["classified", "client", "constant"]
+
+[names]
+constant = " 󰐕 "
+
+[[names.classified]]
+"  " = ["kitty"]
+
+[[names.classified]]
+"  " = ["firefox"]
+
+[[names.classified]]
+" 󰙯 " = ["discord"]
+
+[[names.classified]]
+" 󰺵 " = ["leagueclient.exe", "leagueclientux.exe", "league of legends.exe", "steam_app_306130", "riotclientservices.exe", "Lutris", "glaclient-linux"]
+
+[[names.classified]]
+" 󰓓 " = ["steam"]
+
+[[names.classified]]
+" 󱢾 " = ["heroic"]
+
+[[names.classified]]
+"  " = ["jetbrains-datagrip"]
+
+[[names.classified]]
+" 󱐋 " = ["blitz.exe"]
+
+[[names.classified]]
+"  " = ["Insomnia"]
+
+[[names.classified]]
+"  " = ["ONLYOFFICE Desktop Editors"]
+
+[[names.classified]]
+" 󱡫 " = ["qpwgraph"]
+
+[[names.classified]]
+" 󰍯 " = ["NoiseTorch"]
+
+[[names.classified]]
+" 󱜠 " = ["obs"]
+
+[[names.classified]]
+"  " = ["TelegramDesktop"]
+
+[[names.classified]]
+" 󰋊 " = ["Gnome-disks", "GParted"]
+
+[[names.classified]]
+"  " = ["Stremio"]
+
+[[names.classified]]
+"  " = ["looking-glass-client"]
+
