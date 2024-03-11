@@ -1,6 +1,9 @@
-#! /bin/sh
+#!/bin/bash
+killall -q wireplumber
+killall -q pipewire-pulse
+killall -q pipewire
+pipewire &
 export QT_QPA_PLATFORM=xcb &
-killall -q pipewire; pipewire &
 pgrep -x sxhkd > /dev/null || sxhkd &
 ~/.fehbg &
 pgrep -x dunst > /dev/null || dunst &
@@ -9,13 +12,12 @@ setxkbmap br &
 xset r rate 300 30 &
 pgrep -x compfy > /dev/null || compfy &
 pgrep -x udiskie > /dev/null || udiskie -s &
-blugon -f &
-caffeine-indicator &
+pgrep -f /usr/bin/blugon > /dev/null || blugon -f &
 sleep 1
-killall -q pipewire-pulse; pipewire-pulse &
+pipewire-pulse &
+wireplumber &
 ~/.config/polybar/launch.sh &
-btops &
-killall -q wireplumber; wireplumber &
+pgrep -x btops > /dev/null || btops &
 
 bspc config border_width         2
 bspc config window_gap           8
