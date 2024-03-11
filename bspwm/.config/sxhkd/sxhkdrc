@@ -112,12 +112,5 @@ super + s
 	bspc node '@parent.vertical' -R  90 \
 	    || bspc node '@parent' -R -90
 
-
 super + Tab
-	tail_offset=$(cat "/tmp/tail_offset" 2> /dev/null || echo 1); \
-	bspc desktop -f $(cat /tmp/last_desktops | tail -n $tail_offset | head -n 1); \
-	echo "$((tail_offset + 1))" > /tmp/tail_offset; \
-	bspc query -D -d last >> /tmp/last_desktops
-
-super + {_,Release}
-	echo 1 > /tmp/tail_offset
+	bspc desktop -f last
