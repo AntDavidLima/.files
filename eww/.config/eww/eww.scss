@@ -1,77 +1,29 @@
-$foreground: #cad3f5;
-$background: #181926;
-$overlay0: #6e738d;
-
-.cal {
-  border-radius: 8px;
-  padding: 4px;
-}
-
-.time {
-  font-weight: bold;
-  font-size: 16px;
-}
-
 .bar {
-  background-color: transparent;
-  font-family: "JetBrainsMono Nerd Font";
+  background: transparent;
+  margin-left: 10px;
+  margin-right: 10px;
+  margin-top: 10px;
+  font-size: 16px;
 }
 
 .bar-box {
-  margin: 8px 10px 0;
+  background: #282828;
+  color: #ebdbb2;
+  border: 2px solid #fe8019;
+  padding-left: 10px;
+  padding-right: 10px;
 }
 
-.widget {
-  background-color: $background;
-  border-radius: 8px;
-  padding: 0 8px;
-  border: 1px solid $foreground;
-
-  > menubar > menuitem {
-    padding: 0 4px;
-  }
+.workspaces-label {
+  padding-right: 4px;
+  margin-right: 6px;
 }
 
-.workspace-entry {
-  margin: 0 8px 0 5px;
-  font-size: 16px;
+.speaker-label {
+  padding-right: 4px;
+  font-size: 18px;
 }
 
 scale {
-  padding: 16px 16px;
-}
-
-scale trough {
   min-width: 100px;
-}
-
-scale {
-  min-height: 2px;
-}
-
-scale trough slider {
-  margin: -6px;
-  min-height: 14px;
-  min-width: 14px;
-}
-
-scale trough slider:hover {
-  box-shadow:
-    0 0 0 2px rgb(138, 173, 244) inset,
-    0 0 0 6px rgba(255, 255, 255, 0.12);
-}
-
-scale trough slider:active {
-  box-shadow:
-    0 0 0 3px rgb(138, 173, 244) inset,
-    0 0 0 6px rgba(255, 255, 255, 0.12);
-}
-
-menubar {
-  background: transparent;
-}
-
-.revealer-icon {
-  font-size: 20px;
-  padding: 0 4px 0 2px;
 }

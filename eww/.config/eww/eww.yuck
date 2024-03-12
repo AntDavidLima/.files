@@ -14,20 +14,16 @@
 ; Bar foldstart
 (defwidget bar-widget [screen]
   (box :orientation "h"
-       :class "bar-box"
+			 :class "bar-box"
     (box :halign "start"
-    	 :class "widget"
       (workspaces))
     (box :halign "center"
-         :class "widget"
       (time))
     (box :halign "end"
          :spacing 8
          :space-evenly false
-      (box :class "widget"
-        (systray))
-      (box :class "widget"
-        (speaker)))))
+			(systray)
+			(speaker))))
       ;(rame
       ;(cpu)
       ;(network))))
@@ -47,12 +43,12 @@
 ; Modules foldstart
 ; Generic icon module foldstart
 (defwidget icon-module [icon ?class ?visible]
-  (box :class "${class} icon-module"
+  (box :class "${class}"
        :orientation "h"
        :halign "end"
        :space-evenly false
        :visible {visible ?: true} ; because the argument is optional
-    (label :class "icon-module__icon" :text "${icon}")
+    (label :text "${icon}")
     (children)))
 ; foldend
 
@@ -66,10 +62,10 @@
       (children :nth 0))
       (children :nth 1))))
 
-(defwidget hover-module [state statename icon value change mute ?class]
+(defwidget hover-module [state statename icon value change mute ?box-class ?label-class]
   (eventbox :onhover "eww update ${statename}=true"
             :onhoverlost "eww update ${statename}=false"
-    (box :class "${class}"
+    (box :class "${box-class}"
       (revealer-on-hover :state state
                          :statename "${statename}"
                          :icon icon ; BUG: We need to pass icon so that the children widget can find it
@@ -83,29 +79,27 @@
             :timeout "300ms"
             :onchange change))
         (eventbox :onclick mute
-      		  :onscroll change
-          (label :class "revealer-icon" 
-               	 :text icon))))))
+      		  			:onscroll change
+          (label :text icon :class "${label-class}"))))))
 
 (defwidget workspaces []
-  (box
+	(box
     (label :text "${workspaces}${current_workspace}" :visible false)
       (for workspace in workspaces
         (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
-          (box
-	    :class "workspace-entry"
-            (label :text "${workspace.id == current_workspace ? "" : ""}"))))))
+					(label :text "${workspace.id == current_workspace ? "" : ""}"
+								 :class "workspaces-label")))))
 
 (defwidget ram []
-  (icon-module :class "ram" :icon "M" :visible {EWW_RAM.used_mem_perc != ""}
+  (icon-module :icon "M" :visible {EWW_RAM.used_mem_perc != ""}
     (label :text "${round(EWW_RAM.used_mem_perc, 0)}%")))
 
 (defwidget time []
   (eventbox :onclick "$(./modules/toggle-calendar.sh)"
-    (label :class "time" :text time_poll)))
+    (label :text time_poll)))
 
 (defwidget cpu []
-  (icon-module :class "cpu" :icon "C" 
+  (icon-module :icon "C" 
     (label :text "${round(EWW_CPU.avg, 0)}%"))) 
 
 ;(defwidget network []
@@ -114,11 +108,12 @@
 
 (defwidget speaker []
   (hover-module :state {speakopen}
-    :statename "speakopen"
-		:icon "${speaker_poll.icon}"
-		:value "${speaker_poll.content}"
-		:change `eww update speaker_poll="$(./modules/speaker.sh {})"`
-		:mute `eww update speaker_poll="$(./modules/speaker.sh toggle)"`))
+								:statename "speakopen"
+								:icon "${speaker_poll.icon}"
+								:value "${speaker_poll.content}"
+								:change `eww update speaker_poll="$(./modules/speaker.sh {})"`
+								:label-class "speaker-label"
+								:mute `eww update speaker_poll="$(./modules/speaker.sh toggle)"`))
 ; foldend
 
 ; vim:foldmarker=foldstart,foldend
