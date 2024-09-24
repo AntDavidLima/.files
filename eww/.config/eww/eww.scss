@@ -10,20 +10,37 @@
   background: #282828;
   color: #ebdbb2;
   border: 2px solid #fe8019;
-  padding-left: 10px;
   padding-right: 10px;
+  padding-left: 10px;
 }
 
-.workspaces-label {
-  padding-right: 4px;
-  margin-right: 6px;
+.active-workspace {
+  background: #ebdbb2;
+  color: #282828;
+  margin: 6px 8px 6px 0;
+  padding: 0 8px;
+  font-weight: 500;
+  font-size: 12px;
 }
 
-.speaker-label {
+.inactive-workspace {
+  border: 2px solid #ebdbb2;
+  margin: 6px 8px 6px 0;
+  padding: 0 6px;
+  font-weight: 500;
+  font-size: 12px;
+}
+
+.speaker-icon {
   padding-right: 4px;
   font-size: 18px;
 }
 
+.speaker-label {
+  padding-right: 4px;
+}
+
 scale {
   min-width: 100px;
+  margin-left: -8px;
 }

@@ -1,7 +1,7 @@
 local M = {
-	'windwp/nvim-autopairs',
+	"windwp/nvim-autopairs",
 	dependencies = {
-		'nvim-treesitter/nvim-treesitter',
+		"nvim-treesitter/nvim-treesitter",
 	},
 }
 

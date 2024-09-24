@@ -20,9 +20,9 @@
     (box :halign "center"
       (time))
     (box :halign "end"
-         :spacing 8
+         :spacing 16
          :space-evenly false
-			(systray)
+			(systray :spacing 8 :icon-size 20)
 			(speaker))))
       ;(rame
       ;(cpu)
@@ -62,33 +62,32 @@
       (children :nth 0))
       (children :nth 1))))
 
-(defwidget hover-module [state statename icon value change mute ?box-class ?label-class]
+(defwidget hover-module [state statename icon value change mute ?box-class ?icon-class ?label-class ?mix]
   (eventbox :onhover "eww update ${statename}=true"
             :onhoverlost "eww update ${statename}=false"
-    (box :class "${box-class}"
+    (box :class "${box-class}" :space-evenly false
+			(label :text "${value}%" :class "${label-class}")
       (revealer-on-hover :state state
                          :statename "${statename}"
                          :icon icon ; BUG: We need to pass icon so that the children widget can find it
                          :transition "slideleft"
-        (box :space-evenly false
-          (label :text "${value}")
-          (scale :value "${value}"
-            :max 151 
-            :min 0 
-            :round-digits 0
-            :timeout "300ms"
-            :onchange change))
-        (eventbox :onclick mute
+				(scale :value "${value}"
+					:max 151 
+					:min 0 
+					:round-digits 0
+					:timeout "300ms"
+					:onchange change)
+        (eventbox :onclick mute :onrightclick mix
       		  			:onscroll change
-          (label :text icon :class "${label-class}"))))))
+          (label :text icon :class "${icon-class}"))))))
 
 (defwidget workspaces []
-	(box
+	(box :space-evenly false
     (label :text "${workspaces}${current_workspace}" :visible false)
       (for workspace in workspaces
         (eventbox :onclick "hyprctl dispatch workspace ${workspace.id}"
-					(label :text "${workspace.id == current_workspace ? "" : ""}"
-								 :class "workspaces-label")))))
+					(label :text "${workspace.id}"
+								 :class "${workspace.id == current_workspace ? "active-workspace" : "inactive-workspace"}")))))
 
 (defwidget ram []
   (icon-module :icon "M" :visible {EWW_RAM.used_mem_perc != ""}
@@ -112,7 +111,9 @@
 								:icon "${speaker_poll.icon}"
 								:value "${speaker_poll.content}"
 								:change `eww update speaker_poll="$(./modules/speaker.sh {})"`
+								:icon-class "speaker-icon"
 								:label-class "speaker-label"
+								:mix "kitty pulsemixer &"
 								:mute `eww update speaker_poll="$(./modules/speaker.sh toggle)"`))
 ; foldend
 

@@ -1,9 +1,6 @@
 local M = {
 	"nvim-treesitter/nvim-treesitter",
 	build = ":TSUpdate",
-	dependencies = {
-		"windwp/nvim-ts-autotag",
-	},
 }
 
 M.config = function()
@@ -19,9 +16,6 @@ M.config = function()
 			"yuck",
 		},
 		highlight = {
-			enable = true,
-		},
-		autotag = {
 			enable = true,
 		},
 	})

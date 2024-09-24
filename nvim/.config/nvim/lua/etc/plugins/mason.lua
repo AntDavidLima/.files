@@ -21,6 +21,7 @@ M.config = function()
 			"docker_compose_language_service",
 			"eslint",
 			"bashls",
+			"biome",
 		},
 	})
 	require("mason-lspconfig").setup_handlers({
