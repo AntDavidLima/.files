@@ -14,7 +14,7 @@ M.config = function()
 		ensure_installed = {
 			"lua_ls",
 			"tailwindcss",
-			"tsserver",
+			"ts_ls",
 			"html",
 			"prismals",
 			"gopls",
