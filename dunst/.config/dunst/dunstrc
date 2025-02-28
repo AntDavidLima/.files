@@ -39,8 +39,6 @@
 
     close_all = ctrl+space
 
-    history = mod1+grave
-
     # Show how many messages are currently hidden (because of geometry).
     indicate_hidden = yes
 

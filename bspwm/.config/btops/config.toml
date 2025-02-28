@@ -7,53 +7,70 @@ renamers = ["classified", "client", "constant"]
 constant = " 󰐕 "
 
 [[names.classified]]
-"  " = ["kitty"]
+"| " = ["kitty", "Alacritty"]
 
 [[names.classified]]
-"  " = ["firefox"]
+"| " = ["firefox-esr"]
 
 [[names.classified]]
-" 󰙯 " = ["discord"]
+"|󰙯 " = ["discord"]
 
 [[names.classified]]
-" 󰺵 " = ["leagueclient.exe", "leagueclientux.exe", "league of legends.exe", "steam_app_306130", "riotclientservices.exe", "Lutris", "glaclient-linux"]
+"|󰺵 " = ["leagueclient.exe", "leagueclientux.exe", "league of legends.exe", "steam_app_306130", "riotclientservices.exe", "Lutris", "glaclient-linux"]
 
 [[names.classified]]
-" 󰓓 " = ["steam"]
+"|󰓓 " = ["steam"]
 
 [[names.classified]]
-" 󱢾 " = ["heroic"]
+"|󱢾 " = ["heroic"]
 
 [[names.classified]]
-"  " = ["jetbrains-datagrip"]
+"| " = ["jetbrains-datagrip"]
 
 [[names.classified]]
-" 󱐋 " = ["blitz.exe"]
+"|󱐋 " = ["blitz.exe"]
 
 [[names.classified]]
-"  " = ["Insomnia"]
+"| " = ["Insomnia"]
 
 [[names.classified]]
-"  " = ["ONLYOFFICE Desktop Editors"]
+"| " = ["ONLYOFFICE"]
 
 [[names.classified]]
-" 󱡫 " = ["qpwgraph"]
+"|󱡫 " = ["qpwgraph"]
 
 [[names.classified]]
-" 󰍯 " = ["NoiseTorch"]
+"|󰍯 " = ["NoiseTorch"]
 
 [[names.classified]]
-" 󱜠 " = ["obs"]
+"|󱜠 " = ["obs"]
 
 [[names.classified]]
-"  " = ["TelegramDesktop"]
+"| " = ["TelegramDesktop"]
 
 [[names.classified]]
-" 󰋊 " = ["Gnome-disks", "GParted"]
+"|󰋊 " = ["Gnome-disks", "GParted"]
 
 [[names.classified]]
-"  " = ["Stremio"]
+"| " = ["Stremio"]
 
 [[names.classified]]
-"  " = ["looking-glass-client"]
+"| " = ["looking-glass-client"]
 
+[[names.classified]]
+"| " = ["Nextcloud"]
+
+[[names.classified]]
+"| " = ["qt6ct", "qt5ct", "Kvantum Manager", "Lxappearance"]
+
+[[names.classified]]
+"| " = ["Nvidia-settings"]
+
+[[names.classified]]
+"| " = ["deepin-calculator"]
+
+[[names.classified]]
+"|󱃖 " = ["dev.zed.Zed"]
+
+[[names.classified]]
+"|󰖟 " = ["Navegador"]

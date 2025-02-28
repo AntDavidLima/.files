@@ -1,0 +1,11 @@
+"$schema" = 'https://starship.rs/config-schema.json'
+
+add_newline = false
+
+format = "$os$all"
+
+right_format = "$cmd_duration"
+
+[os]
+disabled = false
+format = "[$name](yellow) in "

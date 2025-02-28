@@ -4,7 +4,7 @@
 
 # terminal emulator
 super + Return
-	kitty
+	alacritty
 
 # program launcher
 super + @space
@@ -13,11 +13,8 @@ super + @space
 super + b
 	firefox
 
-super + d
-	discord
-
 super + c
-	gnome-calculator
+	deepin-calculator
 
 super + shift + s
 	flameshot gui

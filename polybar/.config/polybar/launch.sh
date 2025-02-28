@@ -1,9 +1,8 @@
 #!/bin/bash
 
-# Terminate already running bar instances
-killall -q polybar
+
 # If all your bars have ipc enabled, you can also use
 # polybar-msg cmd quit
 
 # Launch Polybar, using default config location ~/.config/polybar/config.ini
-polybar main 2>&1 -r | tee -a /tmp/polybar.log & disown
+pgrep -x polybar > /dev/null || polybar main 2>&1 -r | tee -a /tmp/polybar.log & disown

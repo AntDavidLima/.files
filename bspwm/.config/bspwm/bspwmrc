@@ -1,23 +1,13 @@
 #!/bin/bash
-killall -q wireplumber
-killall -q pipewire-pulse
-killall -q pipewire
-pipewire &
-export QT_QPA_PLATFORM=xcb &
-pgrep -x sxhkd > /dev/null || sxhkd &
-~/.fehbg &
+picom -bf
+xsetroot -cursor_name left_ptr
+export QT_QPA_PLATFORMTHEME=qt5ct
+pegrep -x sxhkd > /dev/null || sxhkd &
+~/.fehbg
 pgrep -x dunst > /dev/null || dunst &
-pgrep -x polkit-gnome > /dev/null || /usr/lib/polkit-gnome/polkit-gnome-authentication-agent-1 &
-setxkbmap br &
-xset r rate 300 30 &
-pgrep -x compfy > /dev/null || compfy &
-pgrep -x udiskie > /dev/null || udiskie -s &
-pgrep -f /usr/bin/blugon > /dev/null || blugon -f &
-sleep 1
-pipewire-pulse &
-wireplumber &
 ~/.config/polybar/launch.sh &
-pgrep -x btops > /dev/null || btops &
+pkill btops
+btops &
 
 bspc config border_width         2
 bspc config window_gap           8
