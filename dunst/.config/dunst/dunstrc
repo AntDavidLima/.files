@@ -33,9 +33,9 @@
 
     width = 300
 
-    height = 200
+    height = (100, 200)
 
-    offset = 20x60
+    offset = (20, 60)
 
     close_all = ctrl+space
 
@@ -303,14 +303,14 @@
     # Otherwise the "#" and following would be interpreted as a comment.
     background = "#282828"
     foreground = "#ebdbb2"
-    timeout = 2
+    timeout = 5
     # Icon for notifications with low urgency, uncomment to enable
     #icon = /path/to/icon
 
 [urgency_normal]
     background = "#282828"
     foreground = "#ebdbb2"
-    timeout = 5
+    timeout = 10
     # Icon for notifications with normal urgency, uncomment to enable
     #icon = /path/to/icon
 

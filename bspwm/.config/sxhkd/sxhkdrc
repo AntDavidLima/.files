@@ -11,7 +11,7 @@ super + @space
 	rofi -show drun
 
 super + b
-	firefox
+	librewolf
 
 super + c
 	deepin-calculator
@@ -61,13 +61,13 @@ super + {_,alt + }{h,j,k,l}
 # focus the next/previous desktop in the current monitor
 super + ctrl + {_,alt + } {h,l}
 	bspc query -D -d last >> /tmp/last_desktops; \
-	bspc {desktop -f,node -d} {prev,next}.local --follow
+	bspc {desktop -f,node -d} {prev,next}.local
 
 
 # focus or send to the given desktop
 super + {_,shift + }{1-9,0}
 	bspc query -D -d >> /tmp/last_desktops; \
-	bspc {desktop -f,node -d} '^{1-9,10}' --follow
+	bspc {desktop -f,node -d} '^{1-9,10}'
 
 super + alt + {1-9,0}
 	bspc node -d '^{1-9,10}'
@@ -85,8 +85,8 @@ super + ctrl + space
 	bspc node -p cancel
 
 # cancel the preselection for the focused desktop
-super + ctrl + alt + space
-	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
+# super + ctrl + alt + space
+# 	bspc query -N -d | xargs -I id -n 1 bspc node id -p cancel
 
 #
 # move/resize

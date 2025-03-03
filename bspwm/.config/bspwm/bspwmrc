@@ -1,23 +1,24 @@
 #!/bin/bash
-picom -bf
 xsetroot -cursor_name left_ptr
 export QT_QPA_PLATFORMTHEME=qt5ct
-pegrep -x sxhkd > /dev/null || sxhkd &
+pgrep -x sxhkd > /dev/null || sxhkd &
+~/.config/polybar/launch.sh
 ~/.fehbg
 pgrep -x dunst > /dev/null || dunst &
-~/.config/polybar/launch.sh &
 pkill btops
 btops &
+dex-autostart -a
 
-bspc config border_width         2
-bspc config window_gap           8
-bspc config automatic_scheme     alternate
-bspc config normal_border_color  "#a89984"
-bspc config focused_border_color "#fe8019"
+bspc config border_width		 2
+bspc config window_gap			 8
+bspc config automatic_scheme		 alternate
+bspc config normal_border_color		 "#a89984"
+bspc config focused_border_color	 "#fe8019"
+bspc config pointer_motion_interval	 1
 
-bspc config split_ratio          0.5
-bspc config borderless_monocle   false
-bspc config gapless_monocle      false
+bspc config split_ratio			 0.5
+bspc config borderless_monocle		 false
+bspc config gapless_monocle		 false
 
 bspc rule -a gnome-calculator state=floating
 bspc rule -a steam_app_306130 state=pseudo_tiled

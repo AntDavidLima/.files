@@ -8,69 +8,28 @@ constant = " 󰐕 "
 
 [[names.classified]]
 "| " = ["kitty", "Alacritty"]
-
-[[names.classified]]
-"| " = ["firefox-esr"]
-
-[[names.classified]]
+"| " = ["LibreWolf"]
+"| " = ["firefox-esr", "firefox", "org.mozilla.firefox"]
 "|󰙯 " = ["discord"]
-
-[[names.classified]]
 "|󰺵 " = ["leagueclient.exe", "leagueclientux.exe", "league of legends.exe", "steam_app_306130", "riotclientservices.exe", "Lutris", "glaclient-linux"]
-
-[[names.classified]]
 "|󰓓 " = ["steam"]
-
-[[names.classified]]
 "|󱢾 " = ["heroic"]
-
-[[names.classified]]
 "| " = ["jetbrains-datagrip"]
-
-[[names.classified]]
 "|󱐋 " = ["blitz.exe"]
-
-[[names.classified]]
 "| " = ["Insomnia"]
-
-[[names.classified]]
 "| " = ["ONLYOFFICE"]
-
-[[names.classified]]
 "|󱡫 " = ["qpwgraph"]
-
-[[names.classified]]
 "|󰍯 " = ["NoiseTorch"]
-
-[[names.classified]]
 "|󱜠 " = ["obs"]
-
-[[names.classified]]
 "| " = ["TelegramDesktop"]
-
-[[names.classified]]
 "|󰋊 " = ["Gnome-disks", "GParted"]
-
-[[names.classified]]
 "| " = ["Stremio"]
-
-[[names.classified]]
 "| " = ["looking-glass-client"]
-
-[[names.classified]]
 "| " = ["Nextcloud"]
-
-[[names.classified]]
 "| " = ["qt6ct", "qt5ct", "Kvantum Manager", "Lxappearance"]
-
-[[names.classified]]
 "| " = ["Nvidia-settings"]
-
-[[names.classified]]
 "| " = ["deepin-calculator"]
-
-[[names.classified]]
 "|󱃖 " = ["dev.zed.Zed"]
-
-[[names.classified]]
 "|󰖟 " = ["Navegador"]
+"|󱫬 " = ["Timeshift-gtk"]
+"|󱅧 " = ["Lxpolkit"]
