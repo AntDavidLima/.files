@@ -10,9 +10,7 @@ export NVM_DIR="$HOME/.nvm"
 
 export PATH=$PATH:/usr/local/go/bin
 export PATH=$PATH:$HOME/go/bin
-
-export PHPBREW_RC_ENABLE=1
-[[ -e ~/.phpbrew/bashrc ]] && source ~/.phpbrew/bashrc
+export PATH=$PATH:$HOME/.local/bin
 
 ZPLUGINDIR="$HOME/.config/zsh/plugins"
 
@@ -33,3 +31,5 @@ plugin-load $repos
 #THIS MUST BE AT THE END OF THE FILE FOR SDKMAN TO WORK!!!
 export SDKMAN_DIR="$HOME/.sdkman"
 [[ -s "$HOME/.sdkman/bin/sdkman-init.sh" ]] && source "$HOME/.sdkman/bin/sdkman-init.sh"
+
+[ -s ~/.luaver/luaver ] && . ~/.luaver/luaver
